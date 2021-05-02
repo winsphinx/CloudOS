@@ -1,0 +1,11 @@
+name: startup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Startup System
+        uses: csexton/debugger-action@master
