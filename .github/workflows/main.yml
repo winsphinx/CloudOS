@@ -7,5 +7,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Startup System
+      - name: Startup system
         uses: csexton/debugger-action@master
+
+      - name: Delete workflow histories
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 7
+          keep_minimum_runs: 0
