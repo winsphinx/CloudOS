@@ -11,7 +11,7 @@ jobs:
         uses: csexton/debugger-action@master
 
       - name: Delete workflow histories
-        uses: Mattraks/delete-workflow-runs@main
+        uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
